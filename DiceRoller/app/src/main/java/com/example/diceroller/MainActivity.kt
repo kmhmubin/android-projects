@@ -2,21 +2,21 @@ package com.example.diceroller
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-//        assign the button ids in a button variable
+// assign a variable for the button
         val rollButton: Button = findViewById(R.id.button)
-//        add an event listener for click
+//        add an event listener for the button
         rollButton.setOnClickListener {
-//            when button pressed it will show this toast message
-            val toast = Toast.makeText(this, "Dice Rolled!!", Toast.LENGTH_SHORT)
-            toast.show()
+//            when the button pressed the text will change
+            val resultTextView: TextView = findViewById(R.id.textView)
+//            assign the text result beforehand
+            resultTextView.text = "6"
         }
     }
 }
