@@ -13,10 +13,27 @@ class MainActivity : AppCompatActivity() {
         val rollButton: Button = findViewById(R.id.button)
 //        add an event listener for the button
         rollButton.setOnClickListener {
-//            when the button pressed the text will change
-            val resultTextView: TextView = findViewById(R.id.textView)
-//            assign the text result beforehand
-            resultTextView.text = "6"
+            rollDice()
         }
+    }
+
+    private fun rollDice() {
+//        assign the dice sides
+        val dice = Dice(6)
+//       save the result in the variable when dice roll
+        val diceRoll = dice.roll()
+//        display the result in the textview
+        val resultTextView: TextView = findViewById(R.id.textView)
+//        convert the result in to string
+        resultTextView.text = diceRoll.toString()
+
+    }
+}
+
+// Dice Class
+
+class Dice(private val numSides: Int) {
+    fun roll(): Int {
+        return (1..numSides).random()
     }
 }
