@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     // calender Date picker function
 
-    fun clickDatePicker(view: View) {
+    private fun clickDatePicker(view: View) {
         val myCalendar = Calendar.getInstance()
         val year = myCalendar.get(Calendar.YEAR)
         val month = myCalendar.get(Calendar.MONTH)
