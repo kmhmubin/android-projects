@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         val day = myCalendar.get(Calendar.DAY_OF_MONTH)
 
         //open date picker popup
-        DatePickerDialog(
+        val datePicker = DatePickerDialog(
             this,
             DatePickerDialog.OnDateSetListener { view, selectedYear, selectedMonth, selectedDayOfMonth ->
                 // assign the user input in the variable and format the view
@@ -65,6 +65,10 @@ class MainActivity : AppCompatActivity() {
             year,
             month,
             day
-        ).show()
+        )
+        // restriction for the future date selection
+        datePicker.datePicker.maxDate = Date().time - 86400000
+        // visible the date picker
+        datePicker.show()
     }
 }
