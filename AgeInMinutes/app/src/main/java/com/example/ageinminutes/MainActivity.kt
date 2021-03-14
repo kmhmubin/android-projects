@@ -42,11 +42,25 @@ class MainActivity : AppCompatActivity() {
                 // get the reference of the text view
                 val showSelectedDate = findViewById<TextView>(R.id.tvSelectedDate)
                 // get the values form selected date
-                showSelectedDate.setText(selectedDate)
+                showSelectedDate.text = selectedDate
                 // converting the date into a standard format
                 val formatDate = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
                 // storing the format date
                 val theDate = formatDate.parse(selectedDate)
+                // converting the date into minutes
+                val selectedDateInMinutes = theDate!!.time / 6000
+
+                // format the date into minuest
+                val currentDate = formatDate.parse(formatDate.format(System.currentTimeMillis()))
+
+                // calculate the date in minutes
+                val currentDateToMinutes = currentDate!!.time / 6000
+                // difference in minutes
+                val differenceInMinutes = currentDateToMinutes - selectedDateInMinutes
+                // get the reference of the text view
+                val showInMinutes = findViewById<TextView>(R.id.tvSelectedDateInMinutes)
+                showInMinutes.text = differenceInMinutes.toString()
+
             },
             year,
             month,
