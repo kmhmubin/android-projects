@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -40,7 +41,12 @@ class MainActivity : AppCompatActivity() {
 
                 // get the reference of the text view
                 val showSelectedDate = findViewById<TextView>(R.id.tvSelectedDate)
-                showSelectedDate.setText(selectedDate).toString()
+                // get the values form selected date
+                showSelectedDate.setText(selectedDate)
+                // converting the date into a standard format
+                val formatDate = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
+                // storing the format date
+                val theDate = formatDate.parse(selectedDate)
             },
             year,
             month,
