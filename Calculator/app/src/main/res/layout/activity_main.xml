@@ -61,7 +61,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="@string/divide"
             android:textSize="20sp"
             tools:ignore="ButtonStyle,NestedWeights" />
@@ -113,7 +113,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="@string/multi"
             android:textSize="20sp"
             tools:ignore="ButtonStyle,NestedWeights" />
@@ -165,7 +165,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="@string/sub"
             android:textSize="20sp"
             tools:ignore="ButtonStyle,NestedWeights" />
@@ -187,7 +187,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onDecimalPoint"
             android:text="@string/dot"
             android:textSize="20sp"
             tools:ignore="ButtonStyle,NestedWeights" />
@@ -207,7 +207,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onClear"
             android:text="@string/clear"
             android:textSize="20sp"
             tools:ignore="ButtonStyle,NestedWeights" />
@@ -217,7 +217,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="@string/plus"
             android:textSize="20sp"
             tools:ignore="ButtonStyle,NestedWeights" />
@@ -239,7 +239,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onEqual"
             android:text="@string/equal"
             android:textSize="30sp"
             tools:ignore="ButtonStyle,NestedWeights" />

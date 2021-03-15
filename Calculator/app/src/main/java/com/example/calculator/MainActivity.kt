@@ -11,4 +11,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onDigit(view: View) {}
+    fun onEqual(view: View) {}
+    fun onOperator(view: View) {}
+    fun onClear(view: View) {}
+    fun onDecimalPoint(view: View) {}
 }
