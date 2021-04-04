@@ -27,7 +27,8 @@ class ItemAdapter(private val context: Context, private val dataset: List<Affirm
         TODO("Not yet implemented")
     }
 
+    //    return the size of the dataset
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return dataset.size
     }
 }
