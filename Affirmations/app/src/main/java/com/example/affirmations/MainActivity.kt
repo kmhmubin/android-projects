@@ -10,10 +10,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // add reference link with the text view
-        val textView: TextView = findViewById(R.id.textview)
 
-        // get the total list from affirmation data source and call loadAffirmations() function
-        textView.text = Datasource().loadAffirmations().size.toString()
     }
 }
