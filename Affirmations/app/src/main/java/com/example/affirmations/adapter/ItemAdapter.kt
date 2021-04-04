@@ -16,19 +16,24 @@ class ItemAdapter(private val context: Context, private val dataset: List<Affirm
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
     // creating view holder for ItemAdapter
+    // provide a reference to the views for each data item
+    // provide access to all the views for a data item in a view holder
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.item_title)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        // create a new view
+        // create a new views
         val adapterLayout =
             LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
         return ItemViewHolder(adapterLayout)
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        // replace the contents of a view by right data set
+        // find the right affirmation object from the data set based on position
+        val item = dataset[position]
+        holder.textView.text = context.resources.getString(item.stringResourceId)
     }
 
     //    return the size of the dataset
